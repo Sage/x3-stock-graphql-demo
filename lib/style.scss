@@ -1,0 +1,120 @@
+$fontAdelle: 'Adelle Sans SAGE';
+$fontOpenSans: 'Open Sans';
+
+@font-face {
+    font-family: $fontAdelle;
+    src: url('/fonts/AdelleSansSAGE.eot');
+    src: url('/fonts/AdelleSansSAGE.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/AdelleSansSAGE.woff2') format('woff2'), url('/fonts/AdelleSansSAGE.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $fontOpenSans;
+    src: url('/fonts/OpenSans-Regular.eot');
+    src: url('/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/OpenSans-Regular.woff2') format('woff2'), url('/fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$slate40: #668592;
+$slate90: #e6ebed;
+$slate95: #f2f5f6;
+$gold: #ffb500;
+$background: #ffffff;
+$boxShadow2: 0 10px 30px 0 rgba(0, 20, 29, 0.1), 0 30px 60px 0 rgba(0, 20, 29, 0.1);
+
+body {
+    font-family: $fontOpenSans;
+    padding-top: 44px;
+    display: flex;
+    overflow: hidden;
+}
+
+#root,
+.se-page-body {
+    display: flex;
+    flex: 1;
+}
+
+.se-page-placeholder {
+    flex: 1;
+    background: url('~/empty-state.png');
+    background-position: center center;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    margin: 40px;
+}
+
+.carbon-navigation-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: none;
+    border-bottom: 1px solid $slate90;
+    width: 100%;
+    height: 48px;
+
+    > .carbon-app-wrapper {
+        height: 48px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.se-navbar-product-title {
+    margin-top: 10px;
+    margin-right: auto;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.55);
+    font-family: $fontAdelle;
+    font-size: 16px;
+    font-weight: 400;
+    height: 28px !important;
+    line-height: 28px;
+    margin-left: 16px;
+    padding: 2px 16px;
+    white-space: nowrap;
+}
+
+.se-navbar-logo-link {
+    .se-navbar-logo {
+        padding: 16px 0 8px 8px;
+        height: 20px;
+    }
+}
+
+.se-navbar-site-select {
+    width: 200px;
+    padding: 8px 0;
+}
+
+.se-site-details {
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+}
+
+.se-product-details-close {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 0 8px;
+}
+
+.se-product-details-body > button {
+    margin: 0;
+}
+
+.se-product-details-picture {
+    max-height: 150px;
+    max-width: 100%;
+    margin: 20px;
+}
+
+.se-product-details-properties {
+    padding-top: 32px;
+}

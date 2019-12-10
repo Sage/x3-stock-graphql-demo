@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "rootDir": "lib",
+    "baseUrl": ".",
+    "outDir": "build",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5"
+  }
+}
