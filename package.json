@@ -2,15 +2,14 @@
     "name": "x3-stock-graphql-demo",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --watch --config ./webpack.js",
         "build": "webpack --config ./webpack.js",
         "format": "prettier --write \"lib/**/*.*\""
     },
     "keywords": [],
-    "author": "bence.laky@sage.com",
-    "license": "ISC",
+    "author": "Bence Laky <bence.laky@sage.com>",
+    "license": "MIT",
     "dependencies": {
         "@apollo/react-components": "^3.1.3",
         "apollo": "^2.21.1",
