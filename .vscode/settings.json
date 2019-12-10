@@ -3,13 +3,10 @@
     "files.exclude": {
         "**/node_modules": true,
         "**/build": true,
-        "**/out": true,
-        "**/certificatetest": true,
         "**/.awcache": true
     },
     "files.insertFinalNewline": true,
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "cSpell.words": ["clas", "dropdown", "reorderable", "sdata", "selectable"],
     "git.ignoreLimitWarning": true,
     "[typescript]": {
         "editor.insertSpaces": true
@@ -17,6 +14,5 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": false
     },
-    "search.usePCRE2": true,
-    "cucumberautocomplete.syncfeatures": "./@sage/**/test-features/**/*.feature"
+    "search.usePCRE2": true
 }
