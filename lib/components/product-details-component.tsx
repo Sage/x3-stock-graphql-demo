@@ -72,38 +72,42 @@ export class ProductDetailsComponent extends React.Component<ProductDetailsProps
                                             />
                                         </Column>
                                     </Row>
-                                    <Row>
-                                        <Column>
-                                            <Number
-                                                readOnly={true}
-                                                label="Stock Unit Volume"
-                                                value={product.stockVolume}
-                                            />
-                                        </Column>
-                                        <Column>
-                                            <Textbox
-                                                readOnly={true}
-                                                label="Volume Unit"
-                                                value={product.volumeUnit.unit}
-                                            />
-                                        </Column>
-                                    </Row>
-                                    <Row>
-                                        <Column>
-                                            <Number
-                                                readOnly={true}
-                                                label="Stock Unit Weight"
-                                                value={product.stockUnitWeight}
-                                            />
-                                        </Column>
-                                        <Column>
-                                            <Textbox
-                                                readOnly={true}
-                                                label="Weight Unit"
-                                                value={product.weightUnit.unit}
-                                            />
-                                        </Column>
-                                    </Row>
+                                    {product.volumeUnit && (
+                                        <Row>
+                                            <Column>
+                                                <Number
+                                                    readOnly={true}
+                                                    label="Stock Unit Volume"
+                                                    value={product.stockVolume}
+                                                />
+                                            </Column>
+                                            <Column>
+                                                <Textbox
+                                                    readOnly={true}
+                                                    label="Volume Unit"
+                                                    value={product.volumeUnit.unit}
+                                                />
+                                            </Column>
+                                        </Row>
+                                    )}
+                                    {product.weightUnit && (
+                                        <Row>
+                                            <Column>
+                                                <Number
+                                                    readOnly={true}
+                                                    label="Stock Unit Weight"
+                                                    value={product.stockUnitWeight}
+                                                />
+                                            </Column>
+                                            <Column>
+                                                <Textbox
+                                                    readOnly={true}
+                                                    label="Weight Unit"
+                                                    value={product.weightUnit.unit}
+                                                />
+                                            </Column>
+                                        </Row>
+                                    )}
                                 </div>
                             </div>
                         );
