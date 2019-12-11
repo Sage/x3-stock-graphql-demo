@@ -1,0 +1,6 @@
+{
+    "secure": false,
+    "xfwd": false,
+    "target": "https://apidemo.sagex3.com",
+    "changeOrigin": true
+}

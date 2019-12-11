@@ -5,6 +5,7 @@ const rootDir = path.resolve(__dirname);
 const buildDir = path.resolve(rootDir, 'build');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const proxySettings = require('./proxy-settings');
 
 module.exports = {
     entry: './lib/index.tsx',
@@ -26,36 +27,27 @@ module.exports = {
         historyApiFallback: {
             index: '/',
         },
-        proxy: [
-            {
-                context: ['/demo'],
-                secure: false,
-                xfwd: false,
-                target: 'https://apidemo.sagex3.com',
-                changeOrigin: true,
-            },
-        ],
+        proxy: [{
+            context: ['/demo'],
+            ...proxySettings,
+        }, ],
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json', 'scss', 'css'],
     },
     plugins: [
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(rootDir + '/dev-resources'),
-                to: buildDir,
-            },
-        ]),
+        new CopyWebpackPlugin([{
+            from: path.resolve(rootDir + '/dev-resources'),
+            to: buildDir,
+        }, ]),
         new MiniCssExtractPlugin({
             filename: 'bundle.css',
         }),
     ],
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.scss$/,
-                use: [
-                    {
+                use: [{
                         loader: MiniCssExtractPlugin.loader,
                     },
                     {
