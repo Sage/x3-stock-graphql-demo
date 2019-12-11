@@ -5,7 +5,6 @@
 build
 out
 node_modules
-certificatetest
 *.vsix
 npm-debug.log.*
 package-lock.json
@@ -15,13 +14,9 @@ coverage/
 
 **/junit-report*.xml
 test-results/
-pages-dist/*
-!pages-dist/.gitkeep
 
-lib/sales/X3/
 debug/
 tmp-meta/
-csvs/
 logs/*
 .idea
 logs/
