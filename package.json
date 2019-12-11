@@ -3,10 +3,12 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
+        "start-prod": "node static-server.js",
         "start": "webpack-dev-server --watch --config ./webpack.js",
         "build": "webpack --config ./webpack.js",
         "format": "prettier --write \"lib/**/*.*\""
     },
+    "main": "static-server.js",
     "keywords": [],
     "author": "The Sage Group plc",
     "license": "Apache-2.0",
@@ -15,10 +17,11 @@
         "apollo": "^2.21.1",
         "apollo-cache-inmemory": "^1.6.3",
         "apollo-client": "^2.6.4",
-        "apollo-react": "^0.7.1",
         "carbon-react": "^11.0.1",
         "core-js": "^3.4.7",
+        "express": "^4.17.1",
         "graphql-tag": "^2.10.1",
+        "http-proxy-middleware": "^0.19.0",
         "i18n-js": "^3.5.0",
         "react": "^16.12.0",
         "react-dom": "^16.12.0"
